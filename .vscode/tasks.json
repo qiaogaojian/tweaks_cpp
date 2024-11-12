@@ -11,7 +11,7 @@
         "${file}",
         "-std=c++11",
         "-o",
-        "${fileDirname}/${fileBasenameNoExtension}"
+        "${workspaceFolder}/build/${fileBasenameNoExtension}"
       ],
       "options": {
         "cwd": "${fileDirname}"
