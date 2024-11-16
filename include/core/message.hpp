@@ -11,8 +11,3 @@ private:
     std::string message_;
 };
 }  // namespace core
-
-#ifndef CORE_MESSAGE_HPP
-#define CORE_MESSAGE_HPP
-
-#endif // CORE_MESSAGE_HPP

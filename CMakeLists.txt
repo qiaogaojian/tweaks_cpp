@@ -20,8 +20,14 @@ include_directories(${PROJECT_SOURCE_DIR}/include)
 # 收集源文件
 file(GLOB_RECURSE SOURCES "src/*.cpp")
 
-# 创建可执行文件
-add_executable(${PROJECT_NAME} ${SOURCES})
+# 创建核心库
+add_library(core_lib
+    src/core/message.cpp
+)
+
+# 修改可执行文件链接
+add_executable(${PROJECT_NAME} src/main.cpp)
+target_link_libraries(${PROJECT_NAME} PRIVATE core_lib)
 
 # 添加测试
 enable_testing()

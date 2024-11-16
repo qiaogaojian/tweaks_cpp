@@ -10,12 +10,20 @@
 ```bash
 #创建并进入构建目录
 mkdir build && cd build
+
 #配置项目
 cmake ..
+
 #构建项目
 cmake --build .
-#运行测试
-ctest
+
+#运行
+./bin/cpp_project
+
+#运行单元测试
+./bin/unit_tests
+# 或者用 ctest
+ctest --output-on-failure
 ```
 
 ## 项目结构说明
