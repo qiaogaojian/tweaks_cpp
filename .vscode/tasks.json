@@ -2,27 +2,19 @@
   "version": "2.0.0",
   "tasks": [
     {
-      "type": "cppbuild",
-      "label": "g++ build",
-      "command": "/usr/bin/g++",
+      "type": "shell",
+      "label": "cmake build",
+      "command": "cmake",
       "args": [
-        "-fdiagnostics-color=always",
-        "-g",         // 启用调试符号
-        "-O0",        // 禁用编译器优化，防止断点失效
-        "${file}",
-        "-std=c++11",
-        "-o",
-        "${workspaceFolder}/build/${fileBasenameNoExtension}"
+        "--build",
+        "${workspaceFolder}/build",
+        "--config",
+        "Debug"
       ],
-      "options": {
-        "cwd": "${workspaceFolder}"
-      },
-      "problemMatcher": ["$gcc"],
       "group": {
         "kind": "build",
         "isDefault": true
-      },
-      "detail": "compiler: /usr/bin/g++"
+      }
     }
   ]
 }

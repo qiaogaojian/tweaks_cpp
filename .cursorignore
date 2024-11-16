@@ -29,3 +29,4 @@ third_party/
 
 # 系统文件
 .DS_Store
+uild/
