@@ -7,7 +7,8 @@
       "command": "/usr/bin/g++",
       "args": [
         "-fdiagnostics-color=always",
-        "-g",
+        "-g",         // 启用调试符号
+        "-O0",        // 禁用编译器优化，防止断点失效
         "${file}",
         "-std=c++11",
         "-o",
@@ -25,3 +26,4 @@
     }
   ]
 }
+
